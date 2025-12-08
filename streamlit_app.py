@@ -7,7 +7,7 @@ st.title("Match literário da Esther")
 st.write("Olá, queridos! Você já pensou 'nossa, queria tanto ler um livro de __________' mas não sabe nem por onde começar a procurar? Esse link é pra você! É um projetinho de férias de verão - fruto da abstinência (voluntária, to bem) de crusader kings/the sims/netflix - que espero ser útil a alguém. Ainda ta na versão betinha kkkk fique a vontade para dar o seu feedback!")
 
 st.write("Responda às perguntas abaixo e receba uma recomendação literária personalizada! Obviamente a base de dados se restringe ao meu acervo de livros... daqui uns anos será maior, se Deus quiser.")
-st.write("OBS: tenha em vista que, assim como no amor, se colocar muito critério fica difícil encontrar um match. Todavia, obviamente, caso ache é mais certeiro")
+st.write("OBS: tenha em vista que, assim como no amor, se colocar muito critério fica difícil encontrar um match. Todavia, obviamente, caso ache é mais certeiro.")
 
 idioma = st.radio(
   "Escolha o idioma:",
@@ -17,3 +17,20 @@ idioma = st.radio(
 filtro = df.copy()
 if idioma != "Indiferente":
   filtro = filtro[filtro["IDIOMA"] == idioma]
+elif idioma != "Português":
+  filtro = filtro[filtro["IDIOMA"] == "Português"]
+elif idioma != "Inglês":
+  filtro = filtro[filtro["IDIOMA"] == "Inglês"]
+
+tamanho = st.radio(
+    "Escolha o tamanho do livro:",
+    ["Curtos (<200 páginas)", "Médios (200–500)", "Longos (>500)"]
+)
+
+filtro = df.copy()
+if tamanho == "Curtos (<200 páginas)":
+    filtro = filtro[filtro["PÁG"] < 200]
+elif tamanho == "Médios (200–500)":
+    filtro = filtro[(filtro["PÁG"] >= 200) & (filtro["PÁG"] <= 500)]
+elif tamanho == "Longos (>500)":
+    filtro = filtro[filtro["PÁG"] > 500]
