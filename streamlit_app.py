@@ -20,7 +20,7 @@ tamanho = st.radio(
 )
 
 origem = st.multiselect(
-    "Pensou no continente natal do autor? Você pode selecionar vários (Rússia e Turquia são asiáticas aqui)",
+    "Pensou no continente natal do autor? Você pode selecionar vários... (ah, Rússia e Turquia são asiáticas aqui)",
     ["África", "América latina", "América do Norte", "Ásia", "Europa", "Oceania" ]
 )
 
