@@ -7,7 +7,7 @@ st.title("Match Literário da Esther")
 
 st.write("Olá! Você já pensou 'nossa, queria tanto ler um livro de __________' mas não sabe nem por onde começar a procurar? Isso é pra você!")
 
-st.write("Nada mais que um projetinho de férias de verão (25/26), fruto da abstinência (voluntária, to bem) de crusader kings/the sims/netflix, espero que seja útil a alguém. Ainda ta na versão betinha kkkk fique a vontade para dar o seu feedback!")
+st.write("Nada mais que um projetinho de férias de verão 25/26, fruto da abstinência (voluntária, to bem) de crusader kings/the sims/netflix, espero que seja útil a alguém. Ainda ta na versão betinha kkkk fique a vontade para dar o seu feedback!")
 
 st.write("Sem mais delongas, responda às perguntas abaixo e receba uma recomendação literária personalizada! Obviamente a base de dados se restringe ao meu acervo de livros... daqui uns anos será maior, se Deus quiser.")
 
@@ -58,9 +58,9 @@ if st.button("Indicar livro"):
 #filtro romance#
   if romance != "Não sei, eis a questão...":
     filtro = filtro[filtro["LOVE"] == romance]
-  elif idioma != "Sim":
+  elif romance != "Sim":
     filtro = filtro[filtro["LOVE"] == "S"]
-  elif idioma != "Não":
+  elif romance != "Não":
     filtro = filtro[filtro["LOVE"] == "N"]
   
   if filtro.empty:
