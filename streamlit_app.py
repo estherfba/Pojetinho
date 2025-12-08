@@ -44,9 +44,9 @@ if st.button("Indicar livro"):
   else:
     livro = filtro.sample(1).iloc[0]
 
-    st.sucess("É MATCH! Sua recomendação é:")
+    st.sucess("MATCH! Sua recomendação é:")
 
-  st.markdown(f"""
+  st.markdown("""
   ### **{livro['TÍTULO']}**
   **Autor: **{livro['AUTOR']}
   **Idioma: **{livro['IDIOMA']}
