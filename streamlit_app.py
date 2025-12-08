@@ -45,13 +45,6 @@ if st.button("Indicar livro"):
     livro = filtro.sample(1).iloc[0]
 
     st.success("MATCH! Sua recomendação é:")
-
- st.markdown(f"""
-  ### **{livro['TÍTULO']}**
-  **Autor: **{livro['AUTOR']}
-  **Idioma: **{livro['IDIOMA']}
-  **Tema geral: **{livro['GERAL']}
-  **Páginas: **{livro['PÁG']}
-  """)
+    st.write(livro)
 
   st.info("Caso queira gerar outra recomendação, clique novamente.")
