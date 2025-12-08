@@ -19,31 +19,32 @@ tamanho = st.radio(
     ["Curtos (<200 páginas)", "Médios (200–500)", "Longos (>500)"]
 )
 
-if st.button("Indicar livro"):
+if st.button("Indicar livro")
+
   filtro = df.copy()
 
-#filtro idioma#
-if idioma != "Indiferente":
-  filtro = filtro[filtro["IDIOMA"] == idioma]
-elif idioma != "Português":
-  filtro = filtro[filtro["IDIOMA"] == "Português"]
-elif idioma != "Inglês":
-  filtro = filtro[filtro["IDIOMA"] == "Inglês"]
+  #filtro idioma#
+  if idioma != "Indiferente":
+    filtro = filtro[filtro["IDIOMA"] == idioma]
+  elif idioma != "Português":
+    filtro = filtro[filtro["IDIOMA"] == "Português"]
+  elif idioma != "Inglês":
+    filtro = filtro[filtro["IDIOMA"] == "Inglês"]
 
-#filtro tamanho#
-if tamanho == "Curtos (<200 páginas)":
-    filtro = filtro[filtro["PÁG"] < 200]
-elif tamanho == "Médios (200–500)":
-    filtro = filtro[(filtro["PÁG"] >= 200) & (filtro["PÁG"] <= 500)]
-elif tamanho == "Longos (>500)":
-    filtro = filtro[filtro["PÁG"] > 500]
+  #filtro tamanho#
+  if tamanho == "Curtos (<200 páginas)":
+      filtro = filtro[filtro["PÁG"] < 200]
+  elif tamanho == "Médios (200–500)":
+      filtro = filtro[(filtro["PÁG"] >= 200) & (filtro["PÁG"] <= 500)]
+  elif tamanho == "Longos (>500)":
+      filtro = filtro[filtro["PÁG"] > 500]
 
-if filtro.empty:
-  st.error("Não encontrei nenhum livro com esses critérios!")
-else:
-  livro = filtro.sample(1).iloc[0]
+  if filtro.empty:
+    st.error("Não encontrei nenhum livro com esses critérios!")
+  else:
+    livro = filtro.sample(1).iloc[0]
 
-  st.sucess("É MATCH! Sua recomendação é:")
+    st.sucess("É MATCH! Sua recomendação é:")
 
   st.markdown(f"""
   ### **{livro['TÍTULO']}**
