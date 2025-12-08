@@ -14,7 +14,15 @@ idioma = st.radio(
   ["Indiferente", "Português", "Inglês"]
 )
 
-filtro = df.copy()
+tamanho = st.radio(
+    "Escolha o tamanho do livro:",
+    ["Curtos (<200 páginas)", "Médios (200–500)", "Longos (>500)"]
+)
+
+if st.button("Indicar livro"):
+  filtro = df.copy()
+
+#filtro idioma#
 if idioma != "Indiferente":
   filtro = filtro[filtro["IDIOMA"] == idioma]
 elif idioma != "Português":
@@ -22,15 +30,27 @@ elif idioma != "Português":
 elif idioma != "Inglês":
   filtro = filtro[filtro["IDIOMA"] == "Inglês"]
 
-tamanho = st.radio(
-    "Escolha o tamanho do livro:",
-    ["Curtos (<200 páginas)", "Médios (200–500)", "Longos (>500)"]
-)
-
-filtro = df.copy()
+#filtro tamanho#
 if tamanho == "Curtos (<200 páginas)":
     filtro = filtro[filtro["PÁG"] < 200]
 elif tamanho == "Médios (200–500)":
     filtro = filtro[(filtro["PÁG"] >= 200) & (filtro["PÁG"] <= 500)]
 elif tamanho == "Longos (>500)":
     filtro = filtro[filtro["PÁG"] > 500]
+
+if filtro.empty:
+  st.error("Não encontrei nenhum livro com esses critérios!")
+else:
+  livro = filtro.sample(1).iloc[0]
+
+  st.sucess("É MATCH! Sua recomendação é:")
+
+  st.markdown(f"""
+  ### **{livro['TÍTULO']}**
+  **Autor: **{livro['AUTOR']}
+  **Idioma: **{livro['IDIOMA']}
+  **Tema geral: **{livro['GERAL']}
+  **Páginas: **{livro['PÁG']}
+  """)
+
+  st.info("Caso queira gerar outra recomendação, clique novamente.")
