@@ -10,14 +10,19 @@ st.write("Responda às perguntas abaixo e receba uma recomendação literária p
 st.write("OBS: tenha em vista que, assim como no amor, se colocar muito critério fica difícil encontrar um match. Todavia, obviamente, caso ache é mais certeiro.")
 
 idioma = st.radio(
-  "Escolha o idioma:",
+  "Em qual idioma você quer ler?",
   ["Indiferente", "Português", "Inglês"]
 )
 
 tamanho = st.radio(
-    "Escolha o tamanho do livro:",
+    "Qual o tamanho (mais ou menos)?",
     ["Curtos (<200 páginas)", "Médios (200–500)", "Longos (>500)"]
 )
+
+origem = st.multiselect(
+    "Pensou no continente natal do autor? Você pode selecionar vários (Rússia e Turquia são asiáticas aqui)",
+    ["África", "América latina", "América do Norte", "Ásia", "Europa", "Oceania" ]
+
 
 if st.button("Indicar livro"):
 
