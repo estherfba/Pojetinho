@@ -19,7 +19,7 @@ tamanho = st.radio(
     ["Curtos (<200 páginas)", "Médios (200–500)", "Longos (>500)"]
 )
 
-if st.button("Indicar livro")
+if st.button("Indicar livro"):
 
   filtro = df.copy()
 
