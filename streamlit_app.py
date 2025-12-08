@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-df = pd.read_csv("https://raw.githubusercontent.com/estherfba/Pojetinho/refs/heads/main/Biblioteca%20(2).csv")
+df = pd.read_csv("https://raw.githubusercontent.com/estherfba/Pojetinho/refs/heads/main/Biblioteca%20(3).csv")
 
 st.title("Match Literário da Esther")
 
@@ -61,7 +61,7 @@ if st.button("Indicar livro"):
   elif idioma != "Sim":
     filtro = filtro[filtro["LOVE"] == "S"]
   elif idioma != "Não":
-    filtro = filtro[filtro["LOVE"] == ""]
+    filtro = filtro[filtro["LOVE"] == "N"]
   
   if filtro.empty:
     st.error("Não encontrei nenhum livro com esses critérios!")
