@@ -56,11 +56,11 @@ if st.button("Indicar livro"):
 #filtro origem#
 
 #filtro romance#
-  if romance != "Não sei, eis a questão...":
+  if romance == "Não sei, eis a questão...":
     filtro = filtro[filtro["LOVE"] == romance]
-  elif romance != "Sim":
+  elif romance == "Sim":
     filtro = filtro[filtro["LOVE"] == "S"]
-  elif romance != "Não":
+  elif romance == "Não":
     filtro = filtro[filtro["LOVE"] == "N"]
   
   if filtro.empty:
