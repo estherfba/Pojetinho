@@ -5,11 +5,11 @@ df = pd.read_csv("https://raw.githubusercontent.com/estherfba/Pojetinho/refs/hea
 
 st.title("Match Literário da Esther")
 
-st.write("Olá! Você já pensou 'nossa, queria tanto ler um livro de __________' mas não sabe nem por onde começar a procurar? Isso é pra você!")
+st.subheader("Olá! Você já pensou 'nossa, queria tanto ler um livro de __________' mas não sabe nem por onde começar a procurar? Isso é pra você!")
 
 st.write("Nada mais que um projetinho de férias de verão 25/26, fruto da abstinência (voluntária, to bem) de crusader kings/the sims/netflix, espero que seja útil a alguém. Ainda ta na versão betinha kkkk fique a vontade para dar o seu feedback!")
 
-st.write("Sem mais delongas, responda às perguntas abaixo e receba uma recomendação literária personalizada! Obviamente a base de dados se restringe ao meu acervo de livros... daqui uns anos será maior, se Deus quiser.")
+st.header("Sem mais delongas, responda às perguntas abaixo e receba uma recomendação literária personalizada! Obviamente a base de dados se restringe ao meu acervo de livros... daqui uns anos será maior, se Deus quiser.")
 
 st.write("OBS: tenha em vista que, assim como no amor, ao colocar muitos critérios fica mais difícil encontrar uma correspondência. Todavia, obviamente, caso ache é mais certeiro.")
 
@@ -108,6 +108,6 @@ if st.button("Indicar livro"):
     livro = filtro.sample(1).iloc[0]
 
     st.success("MATCH! Sua recomendação é:")
-    st.write(livro)
+    st.write(livro, "Boa leitura!")
 
   st.info("Caso queira gerar outra recomendação, clique novamente.")
