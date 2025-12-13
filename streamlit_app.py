@@ -3,7 +3,7 @@ import pandas as pd
 
 df = pd.read_csv("https://raw.githubusercontent.com/estherfba/Pojetinho/refs/heads/main/Bibliotecanova.csv")
 
-st.title("Match Literário da Esther")
+st.title("Match Literário da Esther :) ")
 
 st.write("Olá! Você já pensou 'nossa, queria tanto ler um livro de __________' mas não sabe nem por onde começar a procurar? Isso é pra você!")
 
