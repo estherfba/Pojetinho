@@ -11,8 +11,6 @@ st.write("Nada mais que um projetinho de férias de verão 25/26, fruto da absti
 
 st.subheader("Sem mais delongas, responda às perguntas abaixo e receba uma recomendação literária personalizada!")
 
-st.write ("Obviamente a base de dados se restringe ao meu acervo de livros... daqui uns anos será maior, se Deus quiser.")
-
 st.write("OBS: tenha em vista que, assim como no amor, ao colocar muitos critérios fica mais difícil encontrar uma correspondência. Todavia, obviamente, caso ache é mais certeiro.")
 
 idioma = st.radio(
@@ -51,6 +49,11 @@ critica = st.radio(
 )
 
 if st.button("Indicar livro"):
+
+
+
+
+st.write ("Obviamente a base de dados se restringe ao meu acervo de livros... daqui uns anos será maior, se Deus quiser.")
 
   filtro = df.copy()
 
