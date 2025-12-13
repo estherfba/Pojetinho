@@ -33,6 +33,21 @@ romance = st.radio(
   ["Não sei, eis a questão...", "Sim", "Não"]
 )
 
+religiao = st.radio(
+  "Tá procurando um livro religioso?",
+  ["Não pensei nisso ainda", "Sim", "Não"]
+)
+
+classico = st.radio(
+  "Sua futura leitura é considerada um clássico da literatura nacional/mundial?",
+  ["Indiferente", "Sim", "Não"]
+)
+
+critica = st.radio(
+  "A história tem um quê de crítica social? Nem que seja velada, assim, no off (salve salve turma do pagode)",
+  ["Não sei dizer", "Sim", "Não"]
+)
+
 if st.button("Indicar livro"):
 
   filtro = df.copy()
@@ -62,6 +77,30 @@ if st.button("Indicar livro"):
     filtro = filtro[filtro["LOVE"] == "S"]
   elif romance == "Não":
     filtro = filtro[filtro["LOVE"] == "N"]
+
+#filtro religiao#
+  if religiao == "Não pensei nisso ainda":
+    filtro = filtro[filtro["REL"] == religiao]
+  elif religiao == "Sim":
+    filtro = filtro[filtro["REL"] == "S"]
+  elif religiao == "Não":
+    filtro = filtro[filtro["REL"] == "N"]
+
+#filtro classico#
+  if classico == "Indiferente":
+    filtro = filtro[filtro["CLÁSSICO"] == classico]
+  elif classico == "Sim":
+    filtro = filtro[filtro["CLÁSSICO"] == "S"]
+  elif classico == "Não":
+    filtro = filtro[filtro["CLÁSSICO"] == "N"]
+
+#filtro critica#
+  if critica == "Não sei dizer":
+    filtro = filtro[filtro["CRÍTICA"] == critica]
+  elif critica == "Sim":
+    filtro = filtro[filtro["CRÍTICA"] == "S"]
+  elif critica == "Não":
+    filtro = filtro[filtro["CRÍTICA"] == "N"]
   
   if filtro.empty:
     st.error("Não encontrei nenhum livro com esses critérios!")
