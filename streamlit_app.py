@@ -48,12 +48,10 @@ critica = st.radio(
   ["Não sei dizer", "Sim", "Não"]
 )
 
-if st.button("Indicar livro"):
-
-
-
 
 st.write ("Obviamente a base de dados se restringe ao meu acervo de livros... daqui uns anos será maior, se Deus quiser.")
+
+if st.button("Indicar livro"):
 
   filtro = df.copy()
 
