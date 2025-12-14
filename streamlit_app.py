@@ -16,12 +16,12 @@ st.write("Nada mais que um projetinho de férias de verão 25/26, fruto da absti
 
 st.write("OBS: tenha em vista que, assim como no amor, ao colocar muitos critérios fica mais difícil encontrar uma correspondência. Todavia, obviamente, caso ache é mais certeiro.")
 
-idioma = st.sidebar.radio(
+idioma = st.radio(
   "Em qual idioma você quer ler?",
   ["Indiferente", "Português", "Inglês"]
 )
 
-tamanho = st.sidebar.radio(
+tamanho = st.radio(
     "Qual o tamanho do livro?",
     ["Curto (<200 páginas)", "Médio (200–500)", "Longo (>500)"]
 )
