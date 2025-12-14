@@ -136,8 +136,8 @@ if st.button("Indicar livro"):
   <p><b>Autor:</b> {livro['AUTOR']}</p>
   <p><b>Tema:</b> {livro['GERAL']}</p>
   <p><b>Subtema:</b> {livro['PARTICULAR']}</p>
-  <p><b>País:</b> {livro['PAÍS']}</p>
-  <p><b>Século:</b> {livro['SÉCULO']}</p>
+  <p><b>País:</b> {livro['PAIS']}</p>
+  <p><b>Século:</b> {livro['SECULO']}</p>
   <p><b>Ano da edição:</b> {livro['ANO']}</p>
   <p><b>Páginas:</b> {livro['PÁG']}</p>
 </div>
