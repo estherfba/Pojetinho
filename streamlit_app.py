@@ -6,22 +6,24 @@ df = pd.read_csv("https://raw.githubusercontent.com/estherfba/Pojetinho/refs/hea
 
 st.title("Match Literário da Esther :) ")
 
-st.write("Olá! Você já pensou 'nossa, queria tanto ler um livro de __________' e travou? Isso é pra você!")
+st.markdown("""
+### Já pensou 'nossa, queria tanto ler um livro de __________' e travou? Isso é pra você! 
+
+Responda às perguntas e receba uma recomendação literária personalizada.
+""")
 
 st.write("Nada mais que um projetinho de férias de verão 25/26, fruto da abstinência (voluntária, to bem) de crusader kings/the sims/netflix, espero que seja útil a alguém. Ainda ta na versão betinha kkkk fique a vontade para dar o seu feedback!")
 
-st.subheader("Sem mais delongas, responda às perguntas abaixo e receba uma recomendação literária personalizada!")
-
 st.write("OBS: tenha em vista que, assim como no amor, ao colocar muitos critérios fica mais difícil encontrar uma correspondência. Todavia, obviamente, caso ache é mais certeiro.")
 
-idioma = st.radio(
+idioma = st.sidebar.radio(
   "Em qual idioma você quer ler?",
   ["Indiferente", "Português", "Inglês"]
 )
 
-tamanho = st.radio(
-    "Qual o tamanho do livro (mais ou menos)?",
-    ["Curtos (<200 páginas)", "Médios (200–500)", "Longos (>500)"]
+tamanho = st.sidebar.radio(
+    "Qual o tamanho do livro?",
+    ["Curto (<200 páginas)", "Médio (200–500)", "Longo (>500)"]
 )
 
 origem = st.multiselect(
