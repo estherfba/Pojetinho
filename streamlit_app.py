@@ -1,11 +1,6 @@
 import streamlit as st
 import pandas as pd
 
-primaryColor = "#7C3AED"
-backgroundColor = "#FFFFFF"
-secondaryBackgroundColor = "#F5F3FF"
-textColor = "#1F2937"
-font = "serif"
 
 df = pd.read_csv("https://raw.githubusercontent.com/estherfba/Pojetinho/refs/heads/main/Bibliotecanova.csv")
 
@@ -62,9 +57,7 @@ if st.button("Indicar livro"):
   filtro = df.copy()
 
   #filtro idioma#
-  if idioma != "Indiferente":
-    filtro = filtro[filtro["IDIOMA"] == idioma]
-  elif idioma != "Português":
+  if idioma != "Português":
     filtro = filtro[filtro["IDIOMA"] == "Português"]
   elif idioma != "Inglês":
     filtro = filtro[filtro["IDIOMA"] == "Inglês"]
@@ -82,33 +75,25 @@ if st.button("Indicar livro"):
     filtro = filtro[filtro["GEOGRAFIA"].isin(origem)]
 
 #filtro romance#
-  if romance == "Não sei, eis a questão...":
-    filtro = filtro[filtro["LOVE"] == romance]
-  elif romance == "Sim":
+  if romance == "Sim":
     filtro = filtro[filtro["LOVE"] == "S"]
   elif romance == "Não":
     filtro = filtro[filtro["LOVE"] == "N"]
 
 #filtro religiao#
-  if religiao == "Não pensei nisso ainda":
-    filtro = filtro[filtro["REL"] == religiao]
-  elif religiao == "Sim":
+  if religiao == "Sim":
     filtro = filtro[filtro["REL"] == "S"]
   elif religiao == "Não":
     filtro = filtro[filtro["REL"] == "N"]
 
 #filtro classico#
-  if classico == "Indiferente":
-    filtro = filtro[filtro["CLÁSSICO"] == classico]
-  elif classico == "Sim":
+  if classico == "Sim":
     filtro = filtro[filtro["CLÁSSICO"] == "S"]
   elif classico == "Não":
     filtro = filtro[filtro["CLÁSSICO"] == "N"]
 
 #filtro critica#
-  if critica == "Não sei dizer":
-    filtro = filtro[filtro["CRÍTICA"] == critica]
-  elif critica == "Sim":
+  if critica == "Sim":
     filtro = filtro[filtro["CRÍTICA"] == "S"]
   elif critica == "Não":
     filtro = filtro[filtro["CRÍTICA"] == "N"]
