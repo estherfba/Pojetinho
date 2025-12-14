@@ -1,11 +1,18 @@
 import streamlit as st
 import pandas as pd
 
+[theme]
+primaryColor = "#7C3AED"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F5F3FF"
+textColor = "#1F2937"
+font = "serif"
+
 df = pd.read_csv("https://raw.githubusercontent.com/estherfba/Pojetinho/refs/heads/main/Bibliotecanova.csv")
 
 st.title("Match Literário da Esther :) ")
 
-st.write("Olá! Você já pensou 'nossa, queria tanto ler um livro de __________' mas não sabe nem por onde começar a procurar? Isso é pra você!")
+st.write("Olá! Você já pensou 'nossa, queria tanto ler um livro de __________' e travou? Isso é pra você!")
 
 st.write("Nada mais que um projetinho de férias de verão 25/26, fruto da abstinência (voluntária, to bem) de crusader kings/the sims/netflix, espero que seja útil a alguém. Ainda ta na versão betinha kkkk fique a vontade para dar o seu feedback!")
 
@@ -72,6 +79,8 @@ if st.button("Indicar livro"):
       filtro = filtro[filtro["PÁG"] > 500]
 
 #filtro origem#
+  if origem:
+    filtro = filtro[filtro["GEOGRAFIA"].isin(origem)]
 
 #filtro romance#
   if romance == "Não sei, eis a questão...":
@@ -111,6 +120,18 @@ if st.button("Indicar livro"):
     livro = filtro.sample(1).iloc[0]
 
     st.success("MATCH! Sua recomendação é:")
-    st.write(livro, "Boa leitura!")
+    st.markdown(f"""
+<div style="
+    border:1px solid #ddd;
+    border-radius:10px;
+    padding:20px;
+    background-color:#f9f9f9;
+">
+<h3>📖 {livro['TÍTULO']}</h3>
+<p><b>Autor:</b> {livro['AUTOR']}</p>
+<p><b>Tema:</b> {livro['GERAL']}</p>
+<p><b>Páginas:</b> {livro['PÁG']}</p>
+</div>
+""", unsafe_allow_html=True)
 
   st.info("Caso queira gerar outra recomendação, clique novamente.")
