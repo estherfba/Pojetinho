@@ -113,6 +113,7 @@ if st.button("Indicar livro"):
     padding:20px;
     background-color:#f9f9f9;
     color:#1F2937;
+    box-shadow:0 4px 10px rgba(0,0,0,0.08);
 ">
 <h3>📖 {livro['TÍTULO']}</h3>
 <p><b>Autor:</b> {livro['AUTOR']}</p>
