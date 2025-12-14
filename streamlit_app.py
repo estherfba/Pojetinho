@@ -112,7 +112,7 @@ if st.button("Indicar livro"):
     border-radius:10px;
     padding:20px;
     background-color:#f9f9f9;
-    textColor = "#1F2937"
+    textColor = "#1F2937";
 ">
 <h3>📖 {livro['TÍTULO']}</h3>
 <p><b>Autor:</b> {livro['AUTOR']}</p>
