@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 
-[theme]
 primaryColor = "#7C3AED"
 backgroundColor = "#FFFFFF"
 secondaryBackgroundColor = "#F5F3FF"
