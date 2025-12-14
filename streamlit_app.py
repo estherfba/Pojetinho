@@ -118,6 +118,10 @@ if st.button("Indicar livro"):
 <h3>📖 {livro['TÍTULO']}</h3>
 <p><b>Autor:</b> {livro['AUTOR']}</p>
 <p><b>Tema:</b> {livro['GERAL']}</p>
+<p><b>Subtema:</b> {livro['PARTICULAR']}</p>
+<p><b>País:</b> {livro['PAÍS']}</p>
+<p><b>Século:</b> {livro['SÉCULO']}</p>
+<p><b>Ano da edição:</b> {livro['ANO']}</p>
 <p><b>Páginas:</b> {livro['PÁG']}</p>
 </div>
 """, unsafe_allow_html=True)
