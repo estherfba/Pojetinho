@@ -88,7 +88,7 @@ if st.button("Indicar livro"):
     filtro = filtro[filtro["LOVE"] == "N"]
 
 #filtro tempo#
- if tempo == "Ambientadas no passado (<1900)":
+  if tempo == "Ambientadas no passado (<1900)":
     filtro = filtro[filtro["TEMPO"] == "P"]
   elif tempo == "No mundo contemporâneo (licença poética)":
     filtro = filtro[filtro["TEMPO"] == "C"]
