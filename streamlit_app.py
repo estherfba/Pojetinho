@@ -9,7 +9,7 @@ st.title("Match Literário da Esther :) ")
 st.markdown("""
 ### Já pensou 'nossa, queria tanto ler um livro de __________' e travou? Isso é pra você! 
 
-Responda às perguntas e receba uma recomendação literária personalizada.
+Responda às perguntas e receba uma recomendação literária.
 
 Nada mais que um projetinho de férias de verão 25/26, fruto da abstinência (voluntária, to bem) de crusader kings/the sims/netflix, espero que seja útil a alguém. Ainda ta na versão betinha kkkk fique a vontade para dar o seu feedback!
 
@@ -23,7 +23,7 @@ idioma = st.radio(
 
 tamanho = st.radio(
     "Qual o tamanho do livro?",
-    ["Curto (<200 páginas)", "Médio (200–500)", "Longo (>500)"]
+    ["Curto (<200 páginas)", "Médio (200–500)", "Longo (>500)", "Indiferente"]
 )
 
 origem = st.multiselect(
@@ -52,7 +52,7 @@ critica = st.radio(
 )
 
 
-st.write ("Obviamente a base de dados se restringe ao meu acervo de livros... daqui uns anos será maior, se Deus quiser.")
+st.write ("A base de dados se restringe ao meu acervo de livros... daqui uns anos será maior, se Deus quiser.")
 
 if st.button("Indicar livro"):
 
