@@ -36,6 +36,11 @@ romance = st.radio(
   ["Não sei, eis a questão...", "Sim", "Não"]
 )
 
+tempo = st.radio(
+  "Você prefere histórias:",
+  ["Ambientadas no passado", "No mundo contemporâneo (não, não to contando tudo depois da queda da bastilha)", "Futuristas", "Tanto faz"]
+)
+
 religiao = st.radio(
   "Tá procurando um livro religioso?",
   ["Não pensei nisso ainda", "Sim", "Não"]
@@ -72,7 +77,7 @@ if st.button("Indicar livro"):
   elif tamanho == "Longos (>500)":
       filtro = filtro[filtro["PÁG"] > 500]
 
-#filtro origem#
+#filtro origem colocar global tamebm?????#
   if origem:
     filtro = filtro[filtro["GEOGRAFIA"].isin(origem)]
 
@@ -82,6 +87,14 @@ if st.button("Indicar livro"):
   elif romance == "Não":
     filtro = filtro[filtro["LOVE"] == "N"]
 
+#filtro tempo#
+ if tempo == "Ambientadas no passado":
+    filtro = filtro[filtro["LOVE"] == "S"]
+  elif tempo == "No mundo contemporâneo":
+    filtro = filtro[filtro["LOVE"] == "N"]
+  elif tempo == "Futurista":
+    filtro = filtro[filtro["LOVE"] == "N"]
+  
 #filtro religiao#
   if religiao == "Sim":
     filtro = filtro[filtro["REL"] == "S"]
