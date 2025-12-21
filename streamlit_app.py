@@ -38,7 +38,7 @@ romance = st.radio(
 
 tempo = st.radio(
   "Você prefere histórias:",
-  ["Ambientadas no passado", "No mundo contemporâneo (não, não to contando tudo depois da queda da bastilha)", "Futuristas", "Tanto faz"]
+  ["Ambientadas no passado (<1900)", "No mundo contemporâneo (licença poética)", "Futuristas", "Tanto faz"]
 )
 
 religiao = st.radio(
@@ -88,12 +88,12 @@ if st.button("Indicar livro"):
     filtro = filtro[filtro["LOVE"] == "N"]
 
 #filtro tempo#
- if tempo == "Ambientadas no passado":
-    filtro = filtro[filtro["LOVE"] == "S"]
-  elif tempo == "No mundo contemporâneo":
-    filtro = filtro[filtro["LOVE"] == "N"]
+ if tempo == "Ambientadas no passado (<1900)":
+    filtro = filtro[filtro["TEMPO"] == "P"]
+  elif tempo == "No mundo contemporâneo (licença poética)":
+    filtro = filtro[filtro["TEMPO"] == "C"]
   elif tempo == "Futurista":
-    filtro = filtro[filtro["LOVE"] == "N"]
+    filtro = filtro[filtro["TEMPO"] == "F"]
   
 #filtro religiao#
   if religiao == "Sim":
