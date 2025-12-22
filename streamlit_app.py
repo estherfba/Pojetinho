@@ -13,7 +13,7 @@ Responda às perguntas e receba uma recomendação literária.
 
 Nada mais que um projetinho de férias de verão 25/26, fruto da abstinência (voluntária, to bem) de crusader kings/the sims/netflix, espero que seja útil a alguém. Ainda ta na versão betinha kkkk fique a vontade para dar o seu feedback!
 
-OBS: tenha em vista que, assim como no amor, ao colocar muitos critérios fica mais difícil encontrar uma correspondência. Todavia, obviamente, caso ache é mais certeiro.
+OBS: tenha em vista que, assim como no amor, colocar muitos critérios dificulta o processo. Todavia, caso ache é mais certeiro.
 """)
 
 idioma = st.radio(
