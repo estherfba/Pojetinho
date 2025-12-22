@@ -113,7 +113,7 @@ if st.button("Indicar livro"):
     filtro = filtro[filtro["CLÁSSICO"] == "N"]
 
 #filtro pensamento#
-   if pensamento == "Dê pra ler com o cérebro desligado":
+  if pensamento == "Dê pra ler com o cérebro desligado":
     filtro = filtro[filtro["PENSAMENTO"] == "D"]
   elif pensamento == "Faça refletir um pouco":
     filtro = filtro[filtro["PENSAMENTO"] == "P"]
