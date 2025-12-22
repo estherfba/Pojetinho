@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 
-df = pd.read_csv("https://raw.githubusercontent.com/estherfba/Pojetinho/refs/heads/main/Biblioteca%20-%20Dados.csv")
+df = pd.read_csv("https://raw.githubusercontent.com/estherfba/Pojetinho/refs/heads/main/Biblioteca%20-%20Dados%20(1).csv")
 
 st.title("Match Literário da Esther :) ")
 
