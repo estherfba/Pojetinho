@@ -51,6 +51,11 @@ classico = st.radio(
   ["Indiferente", "Sim", "Não"]
 )
 
+pensamento = st.radio(
+  "Você quer um livro que:",
+  ["Dê pra ler com o cérebro desligado", "Faça refletir um pouco", "Exija atenção total", "Não sei"]
+)
+
 critica = st.radio(
   "A história tem um quê de crítica social? Nem que seja velada, assim, no off (salve salve turma do pagode)",
   ["Não sei dizer", "Sim", "Não"]
@@ -107,6 +112,14 @@ if st.button("Indicar livro"):
   elif classico == "Não":
     filtro = filtro[filtro["CLÁSSICO"] == "N"]
 
+#filtro pensamento#
+   if pensamento == "Dê pra ler com o cérebro desligado":
+    filtro = filtro[filtro["PENSAMENTO"] == "D"]
+  elif pensamento == "Faça refletir um pouco":
+    filtro = filtro[filtro["PENSAMENTO"] == "P"]
+  elif pensamento == "Exija atenção total":
+    filtro = filtro[filtro["PENSAMENTO"] == "T"]
+    
 #filtro critica#
   if critica == "Sim":
     filtro = filtro[filtro["CRÍTICA"] == "S"]
