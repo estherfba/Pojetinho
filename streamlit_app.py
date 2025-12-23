@@ -7,7 +7,7 @@ df = pd.read_csv("https://raw.githubusercontent.com/estherfba/Pojetinho/refs/hea
 st.title("Match Literário da Esther :) ")
 
 st.image(
-  "https://pin.it/2qDgRx6IW",
+  "https://i.pinimg.com/736x/2d/f4/5a/2df45abebdbfee797e1502c5509d5370.jpg",
   use_column_width=True
 )
 
@@ -32,6 +32,7 @@ tamanho = st.radio(
     ["Curto (<200 páginas)", "Médio (200–500)", "Longo (>500)", "Indiferente"]
 )
 
+st.image("https://i.pinimg.com/1200x/8b/9d/a7/8b9da7de3e56d0978a08d9a43ac1cf9f.jpg")
 origem = st.multiselect(
     "Pensou no continente natal do autor? Você pode selecionar vários... (ah, Rússia e Turquia são asiáticas aqui)",
     ["África", "América latina", "América do Norte", "Ásia", "Europa", "Oceania" ]
@@ -47,7 +48,7 @@ tempo = st.radio(
   ["Ambientadas no passado (<1900)", "No mundo contemporâneo (licença poética)", "Futuristas", "Tanto faz"]
 )
 
-st.image("https://br.pinterest.com/pin/76701999897888355/")
+st.image("https://i.pinimg.com/736x/fc/6f/d8/fc6fd80d7bfd04aa80023bc0cefa6eb8.jpg")
 religiao = st.radio(
   "Tá procurando um livro religioso?",
   ["Não pensei nisso ainda", "Sim", "Não"]
