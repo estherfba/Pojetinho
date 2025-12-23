@@ -6,6 +6,8 @@ df = pd.read_csv("https://raw.githubusercontent.com/estherfba/Pojetinho/refs/hea
 
 st.title("Match Literário da Esther :) ")
 
+st.image("https://pin.it/2qDgRx6IW")
+
 st.markdown("""
 ### Já pensou 'nossa, queria tanto ler um livro de __________' e travou? Isso é pra você! 
 
@@ -20,6 +22,7 @@ idioma = st.radio(
   "Em qual idioma você quer ler?",
   ["Indiferente", "Português", "Inglês"]
 )
+st.image("https://pin.it/4JNuFeRmZ")
 
 tamanho = st.radio(
     "Qual o tamanho do livro?",
@@ -41,6 +44,7 @@ tempo = st.radio(
   ["Ambientadas no passado (<1900)", "No mundo contemporâneo (licença poética)", "Futuristas", "Tanto faz"]
 )
 
+st.image("https://pin.it/Gpqq6OFtO")
 religiao = st.radio(
   "Tá procurando um livro religioso?",
   ["Não pensei nisso ainda", "Sim", "Não"]
