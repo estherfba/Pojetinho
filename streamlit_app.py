@@ -25,24 +25,32 @@ idioma = st.radio(
   "Em qual idioma você quer ler?",
   ["Indiferente", "Português", "Inglês"]
 )
-st.image("https://pin.it/4JNuFeRmZ")
+
+
+st.image("https://i.pinimg.com/1200x/f2/69/85/f26985561563a70723451899a1be681a.jpg")
 
 tamanho = st.radio(
     "Qual o tamanho do livro?",
     ["Curto (<200 páginas)", "Médio (200–500)", "Longo (>500)", "Indiferente"]
 )
 
+
 st.image("https://i.pinimg.com/1200x/8b/9d/a7/8b9da7de3e56d0978a08d9a43ac1cf9f.jpg")
+
 origem = st.multiselect(
     "Pensou no continente natal do autor? Você pode selecionar vários... (ah, Rússia e Turquia são asiáticas aqui)",
     ["África", "América latina", "América do Norte", "Ásia", "Europa", "Oceania" ]
 )
 
+
 st.image("https://i.pinimg.com/736x/5d/2d/e6/5d2de6b91231c9435d701fdbf88935c3.jpg")
+
 romance = st.radio(
   "O amor romântico é o tema principal?",
   ["Não sei, eis a questão...", "Sim", "Não"]
 )
+
+st.image("https://i.pinimg.com/736x/cf/16/d8/cf16d850dcdedc7a295e87e0516ab03d.jpg")
 
 tempo = st.radio(
   "Você prefere histórias:",
@@ -50,6 +58,8 @@ tempo = st.radio(
 )
 
 st.image("https://i.pinimg.com/736x/fc/6f/d8/fc6fd80d7bfd04aa80023bc0cefa6eb8.jpg")
+
+
 religiao = st.radio(
   "Tá procurando um livro religioso?",
   ["Não pensei nisso ainda", "Sim", "Não"]
@@ -60,12 +70,17 @@ classico = st.radio(
   ["Indiferente", "Sim", "Não"]
 )
 
+
+st.image("https://i.pinimg.com/736x/fb/41/fd/fb41fdd7fca3128bd234e8077ffb465a.jpg")
+
 pensamento = st.radio(
   "Você quer um livro que:",
   ["Dê pra ler com o cérebro desligado", "Faça refletir um pouco", "Exija atenção total", "Não sei"]
 )
 
+
 st.image("https://i.pinimg.com/1200x/a8/3e/41/a83e416a7fb0d74e522a2296860e0742.jpg")
+
 critica = st.radio(
   "A história tem um quê de crítica social? Nem que seja velada, assim, no off (salve salve turma do pagode)",
   ["Não sei dizer", "Sim", "Não"]
