@@ -6,7 +6,10 @@ df = pd.read_csv("https://raw.githubusercontent.com/estherfba/Pojetinho/refs/hea
 
 st.title("Match Literário da Esther :) ")
 
-st.image("https://pin.it/2qDgRx6IW")
+st.image(
+  "https://pin.it/2qDgRx6IW",
+  use_column_width=True
+)
 
 st.markdown("""
 ### Já pensou 'nossa, queria tanto ler um livro de __________' e travou? Isso é pra você! 
