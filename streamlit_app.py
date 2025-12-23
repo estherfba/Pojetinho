@@ -44,7 +44,7 @@ tempo = st.radio(
   ["Ambientadas no passado (<1900)", "No mundo contemporâneo (licença poética)", "Futuristas", "Tanto faz"]
 )
 
-st.image("https://pin.it/Gpqq6OFtO")
+st.image("https://br.pinterest.com/pin/76701999897888355/")
 religiao = st.radio(
   "Tá procurando um livro religioso?",
   ["Não pensei nisso ainda", "Sim", "Não"]
