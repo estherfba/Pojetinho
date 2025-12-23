@@ -34,9 +34,6 @@ tamanho = st.radio(
     ["Curto (<200 páginas)", "Médio (200–500)", "Longo (>500)", "Indiferente"]
 )
 
-
-st.image("https://i.pinimg.com/1200x/8b/9d/a7/8b9da7de3e56d0978a08d9a43ac1cf9f.jpg")
-
 origem = st.multiselect(
     "Pensou no continente natal do autor? Você pode selecionar vários... (ah, Rússia e Turquia são asiáticas aqui)",
     ["África", "América latina", "América do Norte", "Ásia", "Europa", "Oceania" ]
@@ -49,8 +46,6 @@ romance = st.radio(
   "O amor romântico é o tema principal?",
   ["Não sei, eis a questão...", "Sim", "Não"]
 )
-
-st.image("https://i.pinimg.com/736x/cf/16/d8/cf16d850dcdedc7a295e87e0516ab03d.jpg")
 
 tempo = st.radio(
   "Você prefere histórias:",
