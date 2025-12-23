@@ -38,6 +38,7 @@ origem = st.multiselect(
     ["África", "América latina", "América do Norte", "Ásia", "Europa", "Oceania" ]
 )
 
+st.image("https://i.pinimg.com/736x/5d/2d/e6/5d2de6b91231c9435d701fdbf88935c3.jpg")
 romance = st.radio(
   "O amor romântico é o tema principal?",
   ["Não sei, eis a questão...", "Sim", "Não"]
@@ -64,6 +65,7 @@ pensamento = st.radio(
   ["Dê pra ler com o cérebro desligado", "Faça refletir um pouco", "Exija atenção total", "Não sei"]
 )
 
+st.image("https://i.pinimg.com/1200x/a8/3e/41/a83e416a7fb0d74e522a2296860e0742.jpg")
 critica = st.radio(
   "A história tem um quê de crítica social? Nem que seja velada, assim, no off (salve salve turma do pagode)",
   ["Não sei dizer", "Sim", "Não"]
